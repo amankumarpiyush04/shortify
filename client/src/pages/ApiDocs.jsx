@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import API_URL from "../utils/api";
 
-const BASE_URL = "http://localhost:5000";
 
 const endpoints = [
   {
@@ -135,7 +135,7 @@ function ApiDocs() {
             </span>
 
             <span className="font-mono text-xs text-zinc-400">
-              {BASE_URL}
+              {API_URL}
             </span>
           </div>
         </div>
@@ -284,7 +284,7 @@ function ApiDocs() {
     "id": 12,
     "original_url": "https://example.com",
     "short_code": "my-link",
-    "short_url": "http://localhost:5000/my-link"
+    "short_url": "${API_URL}/my-link"
   }
 }`}
                   >
@@ -294,7 +294,7 @@ function ApiDocs() {
     "id": 12,
     "original_url": "https://example.com",
     "short_code": "my-link",
-    "short_url": "http://localhost:5000/my-link"
+   "short_url": "${API_URL}/my-link"
   }
 }`}
                   </CodeBlock>
@@ -318,7 +318,7 @@ function ApiDocs() {
                     Request
                   </p>
 
-                  <CodeBlock>{`GET ${BASE_URL}/api/urls`}</CodeBlock>
+                  <CodeBlock>{`GET ${API_URL}/api/urls`}</CodeBlock>
                 </div>
 
                 <div>
@@ -368,7 +368,7 @@ function ApiDocs() {
                   </p>
 
                   <CodeBlock>
-                    {`GET ${BASE_URL}/api/urls/analytics/overview`}
+                    {`GET ${API_URL}/api/urls/analytics/overview`}
                   </CodeBlock>
                 </div>
 
@@ -441,7 +441,7 @@ function ApiDocs() {
                   </p>
 
                   <CodeBlock>
-                    {`GET ${BASE_URL}/api/urls/12/analytics`}
+                    {`GET ${API_URL}/api/urls/12/analytics`}
                   </CodeBlock>
                 </div>
 
@@ -502,7 +502,7 @@ function ApiDocs() {
                     Request
                   </p>
 
-                  <CodeBlock>{`GET ${BASE_URL}/my-link`}</CodeBlock>
+                  <CodeBlock>{`GET ${API_URL}/my-link`}</CodeBlock>
                 </div>
 
                 <div>

@@ -1,7 +1,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useAuth } from "../context/AuthContext";
-
+import API_URL from "../utils/api";
 function MyLinks() {
   const { token } = useAuth();
 
@@ -13,8 +13,6 @@ function MyLinks() {
   const [statusFilter, setStatusFilter] = useState("all");
   const [sortBy, setSortBy] = useState("newest");
   const [copiedId, setCopiedId] = useState(null);
-
-  const API_URL = "http://localhost:5000";
 
   const fetchLinks = useCallback(async (isRefresh = false) => {
     try {

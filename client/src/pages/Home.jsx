@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useAuth } from "../context/AuthContext";
+import API_URL from "../utils/api";
 import { apiFetch } from "../utils/api";
 import Hero from "../components/Hero";
-
-const API_URL = "http://localhost:5000";
 
 function Home() {
   const [originalUrl, setOriginalUrl] = useState("");
